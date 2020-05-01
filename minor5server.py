@@ -260,11 +260,12 @@ class Player:
             if can_move:
                 try:
                     board[command[1:]] = self.symbol
-                    return True
                 except Board.BadPositionError:
                     self.send('Invalid Move')
                 except Board.OccupiedError:
                     self.send('That spot is already taken')
+                else:
+                    return True
             else:
                 self.send('It\'s not your turn')
 
