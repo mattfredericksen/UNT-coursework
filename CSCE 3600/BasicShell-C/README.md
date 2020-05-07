@@ -1,3 +1,10 @@
+### Note:
+The majority of this README is the same as was submitted for this assignment.
+
+I was solely responsible for [alias.c](alias.c), [myhistory.c](myhistory.c), and [helpers.c](helpers.c). I also wrote the significant majority of [shell.c](shell.c), excepting the portions that integrated my teammates functions.
+
+---
+
 ### Names:  
 Alejandro Munoz
 - [Path](Path.c) command
