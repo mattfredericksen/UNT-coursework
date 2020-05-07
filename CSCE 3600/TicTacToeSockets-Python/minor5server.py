@@ -24,7 +24,7 @@ from signal import signal, SIGINT
 def __main__():
     # check for correct number of arguments
     if len(sys.argv) != 2:
-        print('Usage: ./minor5server <port>')
+        print('Usage: ./minor5server.py <port>')
         sys.exit()
 
     # convert the port number argument to an integer
