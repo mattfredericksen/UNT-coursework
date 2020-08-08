@@ -10,9 +10,9 @@ Intro to Computer Security (CSCE 3550), 07/2020
 
 Principles of Systems Programming (CSCE 3600), 05/2020  
 - [Tic-Tac-Toe Sockets](CSCE%203600/TicTacToeSockets-Python) (Python)
-- [Tic-Tac-Toe Sockets](CSCE%203600/TicTacToeSockets-Python) (C)
-- [Basic Shell](CSCE%203600/TicTacToeSockets-Python) (C)
-- [Unix Process Printing](CSCE%203600/TicTacToeSockets-Python) (Bash)
+- [Tic-Tac-Toe Sockets](CSCE%203600/TicTacToeSockets-C) (C)
+- [Basic Shell](CSCE%203600/BasicShell-C) (C)
+- [Unix Process Printing](CSCE%203600/ProcessPrinting-Bash) (Bash)
 
 Data Structures and Algorithms (CSCE 3110), 05/2020  
 - [Extra Credit](CSCE%203110) (C++)
