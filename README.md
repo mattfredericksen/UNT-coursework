@@ -1,15 +1,18 @@
-### UNT Coursework
-This respository contains code that I wrote for my courses at UNT.
+# UNT Coursework
+This respository contains links to projects I've completed for my courses at UNT.
 
-### Directories
-1. [CSCE 3600](CSCE%203600)
-   - Course Name: Principles of Systems Programming.
-   - Contains code written in [Python](CSCE%203600/TicTacToeSockets-Python), 
-                                          C, 
-                                          and [Bash](CSCE%203600/ProcessPrinting-Bash).
-2. [CSCE 3550](CSCE%203550)
-   - Course Name: Intro to Computer Security
-   - Contains Python code for a simple user-authentication GUI.
-3. [CSCE 3110](CSCE%203110)
-   - Course Name: Data Structures and Algorithms.
-   - Contains code written in C++.
+### Projects
+Fundamentals of Database Systems (CSCE 4350), 07/2020  
+- [Commercial Lego Database](https://github.com/mattfredericksen/CSCE-4350-Lego-Project) (Python, SQL)
+
+Intro to Computer Security (CSCE 3550), 07/2020  
+- [Python 2FA GUI](https://github.com/mattfredericksen/Python_2FA_GUI) (Python, Kivy)
+
+Principles of Systems Programming (CSCE 3600), 05/2020  
+- [Tic-Tac-Toe Sockets](CSCE%203600/TicTacToeSockets-Python) (Python)
+- [Tic-Tac-Toe Sockets](CSCE%203600/TicTacToeSockets-Python) (C)
+- [Basic Shell](CSCE%203600/TicTacToeSockets-Python) (C)
+- [Unix Process Printing](CSCE%203600/TicTacToeSockets-Python) (Bash)
+
+Data Structures and Algorithms (CSCE 3110), 05/2020  
+- [Extra Credit](CSCE%203110) (C++)
