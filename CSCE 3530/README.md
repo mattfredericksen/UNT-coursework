@@ -10,7 +10,7 @@ server or only the client, run `make pyserver` or
 On `cse01.cse.unt.edu`, run `./pyserver <port_number>`.  
 On any cse server, run `./client <port_number>`.
   
-**Usage**:
+**Usage**:  
 The server will only interact with one client at a time. 
 When the client connects, enter any web address up to ~1000 
 characters long. The server's response will be printed on 
