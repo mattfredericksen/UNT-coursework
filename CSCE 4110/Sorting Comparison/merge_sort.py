@@ -1,6 +1,36 @@
 from insertion_sort import insertion_sort
 
 
+def merge(array, start, middle, end):
+    # Two indexes for traversing the two halves
+    i = start
+    j = middle
+
+    # temporary array for sorting
+    merged_array = []
+
+    while i < middle and j < end:
+        if array[i] < array[j]:
+            # The value from the left half has been used
+            merged_array.append(array[i])
+            # Move the iterator forward
+            i += 1
+        else:
+            merged_array.append(array[j])
+            j += 1
+
+    # For all the remaining values
+    while i < middle:
+        merged_array.append(array[i])
+        i += 1
+
+    while j < end:
+        merged_array.append(array[j])
+        j += 1
+
+    return merged_array
+
+
 # Adapted from https://www.educative.io/edpresso/merge-sort-in-python
 def merge_sort(array, k, start, end):
     if end - start > 1:
@@ -18,33 +48,7 @@ def merge_sort(array, k, start, end):
         else:
             insertion_sort(array, middle, end)
 
-        # Two indexes for traversing the two halves
-        i = start
-        j = middle
-
-        # temporary array for sorting
-        subarray = []
-
-        while i < middle and j < end:
-            if array[i] < array[j]:
-                # The value from the left half has been used
-                subarray.append(array[i])
-                # Move the iterator forward
-                i += 1
-            else:
-                subarray.append(array[j])
-                j += 1
-
-        # For all the remaining values
-        while i < middle:
-            subarray.append(array[i])
-            i += 1
-
-        while j < end:
-            subarray.append(array[j])
-            j += 1
-
-        array[start:end] = subarray
+        array[start:end] = merge(array, start, middle, end)
 
 
 if __name__ == '__main__':
