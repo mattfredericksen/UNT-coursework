@@ -38,10 +38,13 @@ def radix_sort(array, base):
 
 
 if __name__ == '__main__':
+    # driver code to test above
     from random import randint
 
     for _ in range(500):
-        arr = [randint(-20, 20) for _ in range(randint(0, 50))]
-        copy = arr.copy()
-        arr = radix_sort(arr, 16)
-        assert arr == sorted(copy)
+        original = [randint(-20, 20) for _ in range(randint(0, 50))]
+        arr = radix_sort(original, 16)
+        if arr != sorted(original):
+            print('radix_sort failed with array:')
+            print(original)
+    print('radix_sort test success')

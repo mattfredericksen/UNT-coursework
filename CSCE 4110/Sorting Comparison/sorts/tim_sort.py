@@ -1,5 +1,5 @@
-from insertion_sort import insertion_sort
-from merge_sort import merge
+from sorts.insertion_sort import insertion_sort
+from sorts.merge_sort import merge
 
 
 # copied from
@@ -46,11 +46,14 @@ def tim_sort(array):
 
 
 if __name__ == '__main__':
-    # Driver code to test above
+    # driver code to test above
     from random import randint
 
-    for _ in range(100):
+    for _ in range(500):
         arr = [randint(-20, 20) for _ in range(randint(0, 50))]
         copy = arr.copy()
         tim_sort(arr)
-        assert arr == sorted(copy)
+        if arr != sorted(copy):
+            print('merge_sort failed with array:')
+            print(copy)
+    print('tim_sort test success')

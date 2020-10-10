@@ -1,4 +1,4 @@
-from insertion_sort import insertion_sort
+from sorts.insertion_sort import insertion_sort
 
 
 def partition(array, start, end):
@@ -35,12 +35,14 @@ def quick_sort(array, k, start, end):
 
 
 if __name__ == '__main__':
-    # Driver code to test above
+    # driver code to test above
     from random import randint
 
-    for _ in range(100):
-        arr = [randint(-10, 10) for _ in range(randint(10, 35))]
+    for _ in range(500):
+        arr = [randint(-20, 20) for _ in range(randint(0, 50))]
         copy = arr.copy()
         quick_sort(arr, 10, 0, len(arr))
-        copy.sort()
-        assert arr == copy
+        if arr != sorted(copy):
+            print('quick_sort failed with array:')
+            print(copy)
+    print('quick_sort test success')

@@ -1,4 +1,4 @@
-from insertion_sort import insertion_sort
+from sorts.insertion_sort import insertion_sort
 
 
 def merge(array, start, middle, end):
@@ -37,12 +37,10 @@ def merge_sort(array, k, start, end):
         middle = (end - start)//2 + start
 
         # Recursive call on each half
-        print(f'sorting {array[start:middle]}')
         if middle - start > k:
             merge_sort(array, k, start, middle)
         else:
             insertion_sort(array, start, middle)
-        print(f'sorting {array[middle:end]}')
         if end - middle > k:
             merge_sort(array, k, middle, end)
         else:
@@ -52,6 +50,14 @@ def merge_sort(array, k, start, end):
 
 
 if __name__ == '__main__':
-    array = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    merge_sort(array, 1, 0, len(array))
-    print(array)
+    # driver code to test above
+    from random import randint
+
+    for _ in range(500):
+        arr = [randint(-20, 20) for _ in range(randint(0, 50))]
+        copy = arr.copy()
+        merge_sort(arr, 10, 0, len(arr))
+        if arr != sorted(copy):
+            print('merge_sort failed with array:')
+            print(copy)
+    print('merge_sort test success')
