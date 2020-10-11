@@ -26,7 +26,7 @@ def test(trials=10):
         print('Generating test data set #{}'.format(i+1))
         test_data = [randint(-10**6, 10**6) for _ in range(10**6)]
         for algo, func in algos.items():
-            print('Running: {}'.format(algo))
+            print('\tRunning: {}'.format(algo))
             runtimes[algo] += get_runtime(func, test_data.copy())
         print()
 
@@ -42,7 +42,7 @@ def test(trials=10):
         print('Generating test data set #{}'.format(i+1))
         test_data = [randint(1, 10) for _ in range(10**6)]
         for algo, func in algos.items():
-            print('Running: {}'.format(algo))
+            print('\tRunning: {}'.format(algo))
             runtimes[algo] += get_runtime(func, test_data.copy())
         print()
 
