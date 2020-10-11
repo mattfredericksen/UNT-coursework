@@ -1,4 +1,16 @@
-from sorts.insertion_sort import insertion_sort
+"""
+This module defines the Merge Sort algorithm.
+Source: https://www.educative.io/edpresso/merge-sort-in-python
+
+The algorithm has been modified to use integer indexes
+in recursive calls, rather than list slices. This prevents
+reference copying for slice creation, significantly
+reducing recursion overhead.
+
+If this module is run directly, it will test itself.
+"""
+
+from .insertion_sort import insertion_sort
 
 
 def merge(array, start, middle, end):
@@ -31,7 +43,6 @@ def merge(array, start, middle, end):
     return merged_array
 
 
-# Adapted from https://www.educative.io/edpresso/merge-sort-in-python
 def _merge_sort(array, k, start, end):
     if end - start > 1:
         middle = (end - start)//2 + start
@@ -64,4 +75,4 @@ if __name__ == '__main__':
         if arr != sorted(copy):
             print('merge_sort failed with array:')
             print(copy)
-    print('merge_sort test success')
+    print('merge_sort test complete')

@@ -1,5 +1,15 @@
-# Based on pseudocode from Wikipedia:
-# https://en.wikipedia.org/wiki/Insertion_sort#Algorithm
+"""
+This module defines the Insertion Sort algorithm.
+
+Based on pseudocode from Wikipedia:
+https://en.wikipedia.org/wiki/Insertion_sort#Algorithm
+
+Modified to accept start and end indexes to work with the
+Quick Sort and Merge Sort algorithms in this package.
+
+If this module is run directly, it will test itself.
+"""
+
 
 def insertion_sort(array, start, end):
     for i in range(start + 1, end):
@@ -22,4 +32,4 @@ if __name__ == '__main__':
         if arr != sorted(copy):
             print('insertion_sort failed with array:')
             print(copy)
-    print('insertion_sort test success')
+    print('insertion_sort test complete')

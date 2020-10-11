@@ -1,4 +1,14 @@
-from sorts.insertion_sort import insertion_sort
+"""
+This module defines the Quick Sort algorithm using Hoare's scheme.
+Source: https://en.wikipedia.org/wiki/Quicksort
+
+The algorithm has been slightly modified
+to use median-of-3 partitioning.
+
+If this module is run directly, it will test itself.
+"""
+
+from .insertion_sort import insertion_sort
 
 
 def partition(array, start, end):
@@ -43,10 +53,11 @@ if __name__ == '__main__':
     from random import randint
 
     for _ in range(500):
-        arr = [randint(-20, 20) for _ in range(randint(0, 50))]
+        # arr = [randint(-20, 20) for _ in range(randint(0, 50))]
+        arr = [randint(1, 10) for _ in range(10**6)]
         copy = arr.copy()
-        quick_sort(arr, 10)
+        quick_sort(arr, 1000)
         if arr != sorted(copy):
             print('quick_sort failed with array:')
             print(copy)
-    print('quick_sort test success')
+    print('quick_sort test complete')
