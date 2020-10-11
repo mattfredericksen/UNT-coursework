@@ -32,21 +32,25 @@ def merge(array, start, middle, end):
 
 
 # Adapted from https://www.educative.io/edpresso/merge-sort-in-python
-def merge_sort(array, k, start, end):
+def _merge_sort(array, k, start, end):
     if end - start > 1:
         middle = (end - start)//2 + start
 
         # Recursive call on each half
         if middle - start > k:
-            merge_sort(array, k, start, middle)
+            _merge_sort(array, k, start, middle)
         else:
             insertion_sort(array, start, middle)
         if end - middle > k:
-            merge_sort(array, k, middle, end)
+            _merge_sort(array, k, middle, end)
         else:
             insertion_sort(array, middle, end)
 
         array[start:end] = merge(array, start, middle, end)
+
+
+def merge_sort(array, k):
+    _merge_sort(array, k, 0, len(array))
 
 
 if __name__ == '__main__':
@@ -56,7 +60,7 @@ if __name__ == '__main__':
     for _ in range(500):
         arr = [randint(-20, 20) for _ in range(randint(0, 50))]
         copy = arr.copy()
-        merge_sort(arr, 10, 0, len(arr))
+        merge_sort(arr, 10)
         if arr != sorted(copy):
             print('merge_sort failed with array:')
             print(copy)

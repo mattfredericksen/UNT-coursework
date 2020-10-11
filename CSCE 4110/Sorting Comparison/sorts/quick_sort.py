@@ -24,14 +24,18 @@ def partition(array, start, end):
     return i
 
 
-def quick_sort(array, k, start, end):
+def _quick_sort(array, k, start, end):
     # assert k > 2
     if end - start > k:
         p = partition(array, start, end)
-        quick_sort(array, k, start, p)
-        quick_sort(array, k, p + 1, end)
+        _quick_sort(array, k, start, p)
+        _quick_sort(array, k, p + 1, end)
     else:
         insertion_sort(array, start, end)
+
+
+def quick_sort(array, k):
+    _quick_sort(array, k, 0, len(array))
 
 
 if __name__ == '__main__':
@@ -41,7 +45,7 @@ if __name__ == '__main__':
     for _ in range(500):
         arr = [randint(-20, 20) for _ in range(randint(0, 50))]
         copy = arr.copy()
-        quick_sort(arr, 10, 0, len(arr))
+        quick_sort(arr, 10)
         if arr != sorted(copy):
             print('quick_sort failed with array:')
             print(copy)
