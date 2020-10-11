@@ -27,6 +27,11 @@ def test(trials=10):
         'Quick Sort (k=10)': partial(quick_sort, k=10),
         'Quick Sort (k=1000)': partial(quick_sort, k=1000),
         'Radix Sort': radix_sort,
+        # Timsort is the default sorting algorithm used by Python.
+        # Algorithm description can be found at:
+        #   https://github.com/python/cpython/blob/master/Objects/listsort.txt
+        # Implementation:
+        #   https://github.com/python/cpython/blob/master/Objects/listobject.c#L1051
         'Tim Sort': lambda array: array.sort()
     }
 
