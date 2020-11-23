@@ -3,7 +3,7 @@ This respository contains links to projects I've completed for my courses at UNT
 
 ### Projects
 Software Engineering (CSCE 3444), *WIP*
-- Residential AC Monitoring and Reporting System (React, Python, Flask)
+- [Residential AC Monitoring and Reporting System](https://github.com/mattfredericksen/CSCE-3444-Group) (React, Python, Flask)
 
 Fundamentals of Database Systems (CSCE 4350), 07/2020  
 - ["Lego Store" Database Application](https://github.com/mattfredericksen/CSCE-4350-Lego-Project) (Python, SQL)
